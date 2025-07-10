@@ -18,10 +18,13 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	//context 를 사용하기위해서 의존성추가
+	implementation("org.springframework:spring-context:6.2.7")
+
 }
 
 tasks.named('test') {
