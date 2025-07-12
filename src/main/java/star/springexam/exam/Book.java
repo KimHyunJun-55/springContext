@@ -7,6 +7,8 @@ public class Book {
     private String title;
     private int price;
 
+    public Book(){}
+
     public String getTitle() {
         return title;
     }
