@@ -2,7 +2,7 @@ package star.springexam.exam;
 
 public class ApplicationContextMain {
     public static void main(String[] args) throws Exception{
-        ApplicationContext applicationContext = new ApplicationContext();
+        ApplicationContext applicationContext =ApplicationContext.getInstance();
 
         Book book1 = (Book)applicationContext.getBean("book1");
         book1.setTitle("타이틀");

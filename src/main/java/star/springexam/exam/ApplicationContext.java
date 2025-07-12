@@ -9,9 +9,18 @@ import java.util.Map;
 import java.util.Properties;
 
 public class ApplicationContext {
-    Map<String, Object> objMap;
-    Properties props;
-    public ApplicationContext(){
+    //ApplicationContext 도 (자기자신) Singleton 패턴으로 만든다.
+    private static ApplicationContext instance = new ApplicationContext();
+
+    private Map<String, Object> objMap;
+    private Properties props;
+
+    public static ApplicationContext getInstance() {
+        return instance;
+    }
+
+
+    private ApplicationContext(){
         props = new Properties();
         objMap = new HashMap<>();
         try {
